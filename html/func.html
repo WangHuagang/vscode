@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        function foo(x) {
+            for (var i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+        }
+        foo('10', '20', '30');
+
+        function foo1(a, b, ...rest) {
+            console.log('a=' + a);
+            console.log('b=' + b);
+            console.log(rest);
+        }
+        foo1(1, 2, 4, 5, 6, 7, 8);
+        for (var i = 0; i < Array.length; i++) {
+            console.log(Array[i]);
+        }
+
+        function max(a, b) {
+            if (a > b) {
+                return a;
+            } else if (a === b) {
+                return a;
+            } else {
+                return b;
+            }
+        }
+        console.log(max(10, 20));
+
+        function func() {
+            var x = 1;
+
+            function bar() {
+                var y = x + 1; // bar可以访问foo的变量x!
+            }
+            console.log(x);
+
+        }
+        func();
+    </script>
+</body>
+
+</html>

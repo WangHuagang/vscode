@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function pow(x) {
+            return x * x;
+        }
+        var arry = [1, 2, 3, 4, 5, 6];
+        console.log(arry.map(pow)); //map里面再调用一个函数
+
+        //要把[1, 3, 5, 7, 9]变换成整数13579
+        var arr = [1, 3, 5, 7, 9];
+        var out = arr.reduce(function(x, y) {
+            return x * 10 + y;
+        });
+        //将数组中的数值加起来求和
+        var o = arr.reduce(function(x, y) {
+            return x + y;
+        })
+        console.log(out);
+        console.log(o);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        var xiaoming = {
+            name: '小明',
+            birth: 1990,
+            age: function() {
+                var that = this; // 在方法内部一开始就捕获this
+                function getAgeFromBirth() {
+                    var y = new Date().getFullYear();
+                    return y - that.birth; // 用that而不是this
+                }
+                return getAgeFromBirth();
+            }
+        };
+
+        xiaoming.age();
+        console.log(xiaoming);
+
+
+        //高阶函数,，函数的参数能接收变量，那么一个函数就可以接收另一个函数作为参数，这种函数就称之为高阶函数。
+        var High_f = function(a, b, f) {
+            console.log(f(a) + f(b));
+        }
+        High_f(5, 6, Math.abs);
+    </script>
+</body>
+
+</html>

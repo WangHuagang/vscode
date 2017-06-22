@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [10, 2, 3, 45, 30];
+        //升序排序
+        var u = arr.sort(function(x, y) {
+                if (x < y) {
+                    return -1;
+                } else if (x > y) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            })
+            //降序排序
+        var d = arr.sort(function(x, y) {
+            if (x < y) {
+                return 1;
+            } else if (x > y) {
+                return -1;
+            } else {
+                return 0;
+            }
+        })
+        console.log(u);
+        console.log(d)
+
+        //字符串比较，要先转换成大小写一致
+
+        var arr1 = ['Tom', 'Jim', 'Atom'];
+        var t = arr1.sort(function(s1, s2) {
+            var x1 = s1.toUpperCase();
+            var x2 = s2.toUpperCase();
+            if (x1 < x2) {
+                return -1;
+            } else if (x1 > x2) {
+                return 1;
+            } else {
+                return 0;
+            }
+        })
+        console.log(t);
+    </script>
+</body>
+
+</html>
