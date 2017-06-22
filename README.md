@@ -25,4 +25,4 @@
 ***
     上面是分割线  
 
-    这是一个超链接(http://www.baidu.com)
+    这是一个超链接[链接](http://www.baidu.com)
